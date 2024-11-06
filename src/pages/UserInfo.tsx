@@ -1,11 +1,64 @@
-import React from 'react'
+import { useEffect } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
+import { useAppDispatch, useAppSelector } from '@/store/hooks/useRedux';
+import { selectUser, selectLoading, selectError, fetchUserData } from '@/store/userSlice';
+import UserProfile from '@/components/myComponents/userProfile';
+import { Button } from '@/components/ui/button';
+import { ArrowLeft } from 'lucide-react';
+import UserRepos from '@/components/myComponents/userRepos';
 
-type Props = {}
+const UserInfo = () => {
+  const { user: username } = useParams();
+  const navigate = useNavigate();
+  const dispatch = useAppDispatch();
 
-const UserInfo = (props: Props) => {
+  const user = useAppSelector(selectUser);
+  const loading = useAppSelector(selectLoading);
+  const error = useAppSelector(selectError);
+
+  useEffect(() => {
+    if (username && !user) {
+      dispatch(fetchUserData(username));
+    }
+  }, [username, dispatch, user]);
+
+  if (loading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-primary"></div>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="min-h-screen flex flex-col items-center justify-center gap-4">
+        <p className="text-destructive text-lg">{error}</p>
+        <Button onClick={() => navigate('/')}>
+          <ArrowLeft className="mr-2 h-4 w-4" />
+          Go Back Home
+        </Button>
+      </div>
+    );
+  }
+
   return (
-    <div>UserInfo</div>
-  )
-}
+    <div className="min-h-screen bg-background">
+      <div className="container mx-auto px-4">
+        <Button
+          variant="ghost"
+          className="mt-4"
+          onClick={() => navigate('/')}
+        >
+          <ArrowLeft className="mr-2 h-4 w-4" />
+          Back to Search
+        </Button>
 
-export default UserInfo
+        <UserProfile />
+        <UserRepos />
+      </div>
+    </div>
+  );
+};
+
+export default UserInfo;

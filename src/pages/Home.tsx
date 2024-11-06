@@ -1,10 +1,12 @@
-import React from 'react'
+import Header from "@/components/myComponents/Header"
+import Hero from "@/components/myComponents/Hero"
 
-type Props = {}
-
-const Home = (props: Props) => {
+const Home = () => {
   return (
-    <div>Home</div>
+    <div className="">
+      <Header />
+      <Hero />
+    </div>
   )
 }
 
