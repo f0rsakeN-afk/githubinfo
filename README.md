@@ -1,50 +1,51 @@
-# React + TypeScript + Vite
+# GitHub Profile Explorer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![GitHub Profile Explorer](./src/assets/home.png) <!-- Add your project screenshot here -->
 
-Currently, two official plugins are available:
+A modern, responsive web application built with React, TypeScript, and Shadcn UI that allows users to explore GitHub profiles and repositories in detail.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🌟 Features
 
-## Expanding the ESLint configuration
+### Profile Information
+- Comprehensive user profile details
+- Profile statistics (followers, following, repos)
+- User bio and contact information
+- Professional status (hireable indicator)
+- Join date and activity status
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### Repository Explorer
+- Detailed repository listings
+- Advanced filtering (All, Forked, Sources, Archived)
+- Pagination with customizable items per page
+- Repository statistics (stars, forks, watchers)
+- Language and topic tags
+- Comprehensive repository metadata
+- Sort by popularity
 
-- Configure the top-level `parserOptions` property like this:
+### User Interface
+- Clean and modern design
+- Responsive layout
+- Dark/Light mode support
+- Loading states and error handling
+- Smooth transitions and animations
+- Intuitive navigation
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## 🚀 Tech Stack
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+- **Frontend Framework**: React + TypeScript
+- **State Management**: Redux Toolkit
+- **Routing**: React Router DOM
+- **UI Components**: Shadcn UI
+- **Styling**: Tailwind CSS
+- **Icons**: Lucide React
+- **HTTP Client**: Axios
+- **Form Handling**: React Hook Form
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## Screenshots
+![GitHub Profile Explorer](./src/assets/home.png)
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+### User Info
+![GitHub Profile Explorer](./src/assets/s2.png)
+
+### Repo info
+![GitHub Profile Explorer](./src/assets/s1.png)
