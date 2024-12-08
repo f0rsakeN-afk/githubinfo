@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+/* import React, { useState, useEffect } from 'react';
 import GitHubCalendar from 'react-github-calendar';
 import { useSearchParams } from 'react-router-dom';
 import {
@@ -51,7 +51,7 @@ const GitHubContributions: React.FC = () => {
                     </Select>
                 </div>
 
-                {isLoaded && (
+                   {isLoaded && (
                     <div className="flex items-center justify-center w-full overflow-x-auto p-4">
                         <GitHubCalendar
                             username={username}
@@ -63,10 +63,10 @@ const GitHubContributions: React.FC = () => {
                             showWeekdayLabels
                         />
                     </div>
-                )}
+                )} 
             </CardContent>
         </Card>
     );
 };
 
-export default GitHubContributions;
+export default GitHubContributions; */
