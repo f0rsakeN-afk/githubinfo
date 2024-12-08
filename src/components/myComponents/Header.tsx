@@ -8,7 +8,7 @@ import { useTheme } from "@/context/themeProvider"
 const Header = () => {
     const { setTheme, theme } = useTheme()
     return (
-        <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 container mx-auto px-4 lg:px-0">
+        <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 container max-w-6xl mx-auto px-4 lg:px-0">
             <div className="container flex h-14 items-center">
                 <div >
                     <Link to='/' className="flex items-center gap-2 mr-6">

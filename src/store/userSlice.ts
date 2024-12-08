@@ -58,7 +58,7 @@ const userSlice = createSlice({
           state.loading = false;
           state.user = action.payload.user;
           state.repos = action.payload.repos;
-          console.log(action.payload);
+          //console.log(action.payload);
           state.error = null;
         }
       )

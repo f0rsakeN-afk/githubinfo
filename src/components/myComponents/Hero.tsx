@@ -26,7 +26,7 @@ const Hero = () => {
 
     return (
         <section className="min-h-[calc(100vh-3.6rem)] flex items-center justify-center bg-background">
-            <div className="container px-4 md:px-6 py-10 md:py-16">
+            <div className="container max-w-6xl px-4 md:px-6 py-10 md:py-16">
                 <div className="grid lg:grid-cols-2 gap-6 items-center">
                     <div className="flex flex-col space-y-8">
                         <div className="space-y-2">

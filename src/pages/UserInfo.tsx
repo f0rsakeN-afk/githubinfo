@@ -46,7 +46,7 @@ const UserInfo = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <div className="container mx-auto px-4">
+      <div className="container max-w-6xl mx-auto px-4">
         <Button
           variant="ghost"
           className="mt-4"
