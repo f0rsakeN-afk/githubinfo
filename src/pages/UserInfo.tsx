@@ -6,6 +6,7 @@ import UserProfile from '@/components/myComponents/userProfile';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft } from 'lucide-react';
 import UserRepos from '@/components/myComponents/userRepos';
+import GitHubContributions from '@/components/myComponents/contributions';
 
 const UserInfo = () => {
   const { user: username } = useParams();
@@ -56,6 +57,7 @@ const UserInfo = () => {
 
         <UserProfile />
         <UserRepos />
+        <GitHubContributions />
       </div>
     </div>
   );
