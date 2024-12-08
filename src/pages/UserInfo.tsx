@@ -6,7 +6,8 @@ import UserProfile from '@/components/myComponents/userProfile';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft } from 'lucide-react';
 import UserRepos from '@/components/myComponents/userRepos';
-import GitHubContributions from '@/components/myComponents/contributions';
+import { Loader } from '@/components/myComponents/Loader';
+//import GitHubContributions from '@/components/myComponents/contributions';
 
 const UserInfo = () => {
   const { user: username } = useParams();
@@ -26,7 +27,7 @@ const UserInfo = () => {
   if (loading) {
     return (
       <div className="min-h-screen flex items-center justify-center">
-        <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-primary"></div>
+        <Loader size='lg' />
       </div>
     );
   }
@@ -57,7 +58,7 @@ const UserInfo = () => {
 
         <UserProfile />
         <UserRepos />
-        <GitHubContributions />
+        {/*  <GitHubContributions /> */}
       </div>
     </div>
   );

@@ -2,8 +2,11 @@ import { Button } from "../ui/button"
 import { Github } from "lucide-react"
 import { Separator } from "../ui/separator"
 import { Link } from "react-router-dom"
+import { Switch } from "../ui/switch"
+import { useTheme } from "@/context/themeProvider"
 
 const Header = () => {
+    const { setTheme, theme } = useTheme()
     return (
         <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 container mx-auto px-4 lg:px-0">
             <div className="container flex h-14 items-center">
@@ -21,6 +24,7 @@ const Header = () => {
 
 
                 <div className="ml-auto flex items-center gap-4">
+                    <Switch checked={theme === 'dark'} onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')} />
                     <a
                         href="https://github.com/f0rsakeN-afk/githubinfo"
                         target="_blank"
